@@ -10,7 +10,6 @@ import org.junit.jupiter.api.Test;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
 public class homework {
-    public String initialText = "Hello UiAutomator!";
     public String newText = "lyalya";
 
     private AndroidDriver driver;
@@ -36,6 +35,7 @@ public class homework {
 
     @Test
     public void emptyField() {
+        var initialText = driver.findElementById("ru.netology.testing.uiautomator:id/textToBeChanged").getText();
         var el1 = driver.findElementById("ru.netology.testing.uiautomator:id/userInput");
         el1.click();
         var el2 = driver.findElementById("ru.netology.testing.uiautomator:id/buttonChange");
